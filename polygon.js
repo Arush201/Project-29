@@ -1,7 +1,7 @@
 class Polygon{
     constructor(x,y){
         var options ={
-            isStatic : true ,
+            isStatic : false ,
             density : 1
         }
         this.radius = 20
@@ -15,6 +15,7 @@ class Polygon{
         push()
         var pos = this.body.position
         translate(pos.x,pos.y)
+        fill("black")
         imageMode(CENTER)
         image(this.image,0,0,this.radius,this.radius)
         pop()

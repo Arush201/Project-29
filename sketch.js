@@ -6,6 +6,7 @@ const Constraint = Matter.Constraint
 
 var a;
 var circles=[];
+
 function setup() {
   createCanvas(800,800);
   stroke(255)
@@ -19,9 +20,10 @@ function setup() {
 	world = engine.world;
 
   //Create the Bodies Here.
+
   ground = new Ground(width/2,590,width,50)
   polygon = new Polygon(200,200)
-  rope = new Rope(ball.body,{x:400,y:100})
+  rope = new Rope(polygon.body,{x:400,y:100})
   
 
 	Engine.run(engine);
@@ -29,7 +31,7 @@ function setup() {
 
 function draw() {
   //camera.zoom=camera.zoom+1
-  background(0);  
+  background(165);  
   
   
   a=a-1;
